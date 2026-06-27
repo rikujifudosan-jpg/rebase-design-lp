@@ -2094,6 +2094,131 @@
     }
 
 
+
+
+    /* Section-by-section impact copy: full-width hero-style copy without boxes or side labels. */
+    .impact-copy {
+      width: 100%;
+      max-width: none;
+      margin: 0 auto;
+      padding: clamp(34px, 4.8vw, 58px) 16px;
+      display: block;
+      text-align: center;
+      background:
+        radial-gradient(circle at 50% 50%, rgba(255, 248, 220, 0.98) 0%, rgba(246, 218, 142, 0.94) 42%, rgba(214, 166, 58, 0.88) 100%),
+        linear-gradient(90deg, rgba(188, 133, 33, 0.42) 0%, rgba(230, 184, 78, 0.76) 16%, rgba(255, 239, 183, 0.92) 50%, rgba(230, 184, 78, 0.76) 84%, rgba(188, 133, 33, 0.42) 100%) !important;
+      border-top: 1px solid rgba(174, 118, 22, 0.28) !important;
+      border-bottom: 1px solid rgba(174, 118, 22, 0.28) !important;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.58),
+        inset 0 -1px 0 rgba(181, 126, 31, 0.18) !important;
+      color: #E60012;
+      font-family: "Impact", "Arial Black", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+      font-size: clamp(2.2rem, 4.15vw, 4rem);
+      line-height: 1.14;
+      letter-spacing: 0.055em;
+      font-weight: 950;
+      text-shadow:
+        0 3px 0 rgba(120, 0, 0, 0.88),
+        0 8px 18px rgba(0, 0, 0, 0.16),
+        0 16px 34px rgba(120, 0, 0, 0.20);
+      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.78);
+      paint-order: stroke fill;
+      transform: skewX(-5deg);
+    }
+
+    .impact-copy::before,
+    .impact-copy::after {
+      content: none !important;
+      display: none !important;
+    }
+
+    .impact-label {
+      display: none !important;
+    }
+
+    .impact-main {
+      width: min(100% - 24px, 1480px);
+      max-width: 1480px;
+      margin: 0 auto;
+      padding: 0;
+      display: block;
+      border: 0 !important;
+    }
+
+    .impact-main span {
+      display: block;
+      white-space: nowrap;
+    }
+
+    .impact-main strong {
+      color: inherit;
+      font-weight: 950;
+    }
+
+    .impact-copy.after-hero {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .impact-copy.after-campaign {
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: clamp(2.15rem, 5.2vw, 4.85rem);
+    }
+
+    .impact-copy.before-a4 {
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+      margin-top: 0;
+      margin-bottom: 0;
+      position: relative;
+      z-index: 3;
+      font-size: clamp(2rem, 4.1vw, 4rem);
+    }
+
+    .impact-copy.before-details {
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: clamp(2.1rem, 5vw, 4.75rem);
+    }
+
+    @media (max-width: 980px) {
+      .impact-copy,
+      .impact-copy.after-campaign,
+      .impact-copy.before-a4,
+      .impact-copy.before-details {
+        padding: 30px 12px;
+        font-size: clamp(1.22rem, 5.9vw, 2.85rem);
+        line-height: 1.18;
+        letter-spacing: 0.025em;
+        transform: skewX(-3deg);
+        -webkit-text-stroke: 0.7px rgba(255, 255, 255, 0.80);
+      }
+
+      .impact-main {
+        width: min(100% - 12px, 980px);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .impact-copy,
+      .impact-copy.after-campaign,
+      .impact-copy.before-a4,
+      .impact-copy.before-details {
+        padding: 24px 8px;
+        font-size: clamp(0.82rem, 3.85vw, 1.2rem);
+        line-height: 1.22;
+        letter-spacing: 0.01em;
+        transform: skewX(-2deg);
+      }
+    }
+
+
   </style>
 </head>
 <body>
@@ -2145,6 +2270,7 @@
       </div>
     </section>
 
+    <p class="impact-copy after-hero"><span class="impact-main"><span>文字だけの数倍のスピードで魅力が伝わる。</span><span>マンガの力で<strong>『読まれない壁』</strong>を越えるチラシ</span></span></p>
 
 
     <section class="section campaign-section" id="campaign" aria-label="実績公開モニターキャンペーン">
@@ -2164,6 +2290,9 @@
         </div>
       </div>
     </section>
+
+    <p class="impact-copy after-campaign"><span class="impact-main"><span>漫画は</span><span>読むより先に、見て伝わる。</span></span></p>
+
 
     <section class="section lp-movie" id="movie" aria-label="紹介動画">
       <div class="container">
@@ -2208,6 +2337,9 @@
 
     <section class="section cream" id="a4">
       <div class="container">
+
+        <p class="impact-copy before-a4"><span class="impact-main"><span>世界に一つだけ。</span><span>本人が登場するマンガチラシ。</span></span></p>
+
         <section class="a4-example a4-first" aria-label="A4縦sample">
           <div class="section-head">
             <span class="section-label">A4 DESIGN</span>
@@ -2356,6 +2488,9 @@
             </div>
           </article>
         </div>
+
+        <p class="impact-copy before-details"><span class="impact-main"><span>あなた自身が、</span><span>チラシの主役になる。</span></span></p>
+
 
       </div>
     </section>
